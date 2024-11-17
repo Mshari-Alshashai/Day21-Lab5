@@ -10,6 +10,8 @@ public class Event {
     private String ID;
     private String description;
     private int capacity;
-    private String startDate;
-    private String endDate;
+   @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
+    private LocalDate startDate;
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
+    private LocalDate endDate;
 }
